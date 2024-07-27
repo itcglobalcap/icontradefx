@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+ 
+ 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <title>Icon Trading Capital - Fatest Payout Prop Firm</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="Homepage/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="Homepage/assets/css/fontawesome.css">
+    <link rel="stylesheet" href="Homepage/assets/css/templatemo-digimedia-v1.css">
+    <link rel="stylesheet" href="Homepage/assets/css/animated.css">
+    <link rel="stylesheet" href="Homepage/assets/css/owl.css">
+<!--
+
+TemplateMo 568 DigiMedia
+
+https://templatemo.com/tm-568-digimedia
+
+-->
+<style>
+/* CSS for desktop screens */
+@media (min-width: 992px) {
+  .hide-on-desktop {
+    display: none; /* Hide on desktop screens (large screens) */
+  }
+}
+
+/* CSS for small screens */
+@media (max-width: 991px) {
+  .hide-on-desktop {
+    display: block; /* Show on small screens (tablets and phones) */
+  }
+}
+
+
+  .glow-text {
+    font-size: 25px;
+    font-weight: bold;
+    position: relative;
+    color: #333; /* Adjust text color as needed */
+    overflow: hidden;
+  }
+
+  .glow-text::before, .glow-text::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    color: #f0f0f0; /* Light silver color */
+    overflow: hidden;
+    width: 100%;
+    animation: shimmer-left 10s infinite linear, shimmer-right 10s infinite linear;
+    opacity: 0;
+  }
+
+  .glow-text::before {
+    left: 100;
+    text-shadow: 1px 0 1px #f0f0f0, 2px 0 2px #f0f0f0, 3px 0 3px #f0f0f0, 4px 0 4px #f0f0f0, 5px 0 5px #f0f0f0, 6px 0 6px #f0f0f0, 7px 0 7px #f0f0f0;
+  }
+
+  .glow-text::after {
+    right: 100;
+    text-shadow: -1px 0 1px #f0f0f0, -2px 0 2px #f0f0f0, -3px 0 3px #f0f0f0, -4px 0 4px #f0f0f0, -5px 0 5px #f0f0f0, -6px 0 6px #f0f0f0, -7px 0 7px #f0f0f0;
+  }
+
+  @keyframes shimmer-left {
+    0% {
+      opacity: 1;
+      transform: translateX(-100%);
+    }
+    100% {
+      opacity: 0;
+      transform: translateX(100%);
+    }
+  }
+
+  @keyframes shimmer-right {
+    0% {
+      opacity: 1;
+      transform: translateX(100%);
+    }
+    100% {
+      opacity: 0;
+      transform: translateX(-100%);
+    }
+  }
+  @media (max-width: 768px) {
+    .main-banner {
+      display: none; /* Hide the main banner on screens <= 768px wide */
+    }
+  }
+
+  .logo-spacing {
+    margin-left: 10px;
+  }  
+
+/* CSS for the modal */
+
+.modal {
+  display: none;
+  position: fixed; /* Ensure the modal is fixed relative to the viewport */
+  z-index: 9999; /* Ensure modal is on top of other content */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* Center the modal vertically */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 600px;
+  position: relative; /* Needed for positioning the progress bar */
+}
+
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* CSS for the story progress bar */
+.story-progress {
+  height: 5px;
+  background-color: #ccc;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+.story-progress-bar {
+  height: 100%;
+  background-color: #4caf50;
+  width: 0;
+  animation: storyProgressBar 8s linear forwards;
+}
+
+@keyframes storyProgressBar {
+  100% {
+    width: 100%;
+  }
+}
+
+
+</style>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    setTimeout(function() {
+      var glowText = document.querySelector('.glow-text');
+      glowText.classList.add('start-shimmer');
+    }, 100000); // 100 seconds delay
+  });
+</script>
+
+  </head>
+
+<body>
+
+
+  <!-- ***** Preloader Start ***** -->
+<div id="preloader">
+  <div id="loader"></div>
+  <div id="preloader-text" data-text="Icon Trade Capital">Icon Trade Capital</div>
+  <div id="candlesticks"></div>
+</div>
+<!-- ***** Preloader End ***** -->
+
+        
+  <!-- ***** Header Area Start ***** -->
+  <header class="header-area header-sticky wow slideInDown" data-wow-duration="0.75s" data-wow-delay="0s">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <nav class="main-nav">
+         <!-- ***** Logo Start ***** -->
+<div class="hide-on-desktop">
+  <div class="profile-picture">
+    <a href="https://instagram.com/itcglobalcap" class="logo">
+      <img src="favicon-32x32.png" alt="Profile Picture 1">
+    </a>
+  </div>
+  <div class="profile-picture logo-spacing">
+    <a href="#" class="logo" onclick="showStory(1)">
+      <img src="Homepage/assets/images/1723leon.jpg" alt="Profile Picture 2">
+    </a>
+  </div>
+  <div class="profile-picture logo-spacing">
+    <a href="#" class="logo" onclick="showStory(2)">
+      <img src="Homepage/assets/images/1721sofia.jpg" alt="Profile Picture 3">
+    </a>
+  </div>
+  <div class="profile-picture logo-spacing">
+    <a href="#" class="logo" onclick="showStory(3)">
+      <img src="Homepage/assets/images/1722acrecia.jpg" alt="Profile Picture 4">
+    </a>
+  </div>
+  <div class="profile-picture logo-spacing">
+    <a href="#" class="logo" onclick="showStory(4)">
+      <img src="Homepage/assets/images/1721leon.jpg" alt="Profile Picture 5">
+    </a>
+  </div>
+</div>
+<!-- ***** Logo End ***** -->
+            <!-- ***** Menu Start ***** -->
+            <ul class="nav">
+              <li class="scroll-to-section"><a href="#top" class="active">Home</a></li>
+              <li class="scroll-to-section"><a href="#services">Models</a></li>
+              <li class="scroll-to-section"><a href="#about">FAQ</a></li>
+              <li class="scroll-to-section"><a href="#portfolio">Affiliate Partner</a></li>
+              <li class="scroll-to-section"><a href="#video">More</a></li> 
+              <li class="scroll-to-section">
+                <div class="main-blue-button-hover">
+                  <a href="https://app.icontradecapital.online/login.php" style="color: white;"><b>My Dashboard</b></a>
+                </div>
+              </li>
+            </ul>       
+          
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+  
+<!-- Story Modal -->
+<div id="storyModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <div id="storyContent"></div>
+    <div class="story-progress"></div>
+  </div>
+</div>
+
+<script>
+  var currentStoryIndex = 0;
+var stories = [
+  [
+    '<img src="Homepage/assets/images/demo-1.jpg" alt="Story 1.1">',
+    '<img src="Homepage/assets/images/p1.jpg" alt="Story 1.2">',
+    '<img src="Homepage/assets/images/p2.jpg" alt="Story 1.3">'
+  ],
+  '<img src="Homepage/assets/images/p1.jpg" alt="Story 2">',
+  '<img src="Homepage/assets/images/p2.jpg" alt="Story 3">',
+  '<img src="Homepage/assets/images/p3.jpg" alt="Story 4">',
+  '<img src="Homepage/assets/images/p4.jpg" alt="Story 5">'
+];
+
+var intervalId; // Variable to store the interval ID for story rotation
+
+function showStory(index) {
+  // Clear any existing interval
+  clearInterval(intervalId);
+
+  // Show the modal
+  if (index === 0) {
+    currentStoryIndex = 0;
+    showNextStory1(); // Start showing story 1 images
+  } else {
+    document.getElementById('storyContent').innerHTML = stories[index];
+    document.getElementById('storyModal').style.display = 'block';
+    startProgressBar();
+    setTimeout(closeModal, 8000); // Close modal after 8 seconds
+  }
+}
+
+function showNextStory1() {
+  document.getElementById('storyContent').innerHTML = stories[0][currentStoryIndex];
+  startProgressBar();
+  currentStoryIndex = (currentStoryIndex + 1) % stories[0].length; // Move to next story
+  intervalId = setInterval(showNextStory1, 8000); // Rotate stories every 8 seconds
+}
+
+function startProgressBar() {
+  // Initialize progress bar
+  var progressBar = document.createElement('div');
+  progressBar.className = 'story-progress-bar';
+  document.querySelector('.story-progress').appendChild(progressBar);
+
+  // Update progress bar every second
+  var startTime = Date.now();
+  var duration = 8000; // 8 seconds
+  var updateInterval = setInterval(function() {
+    var elapsedTime = Date.now() - startTime;
+    var progress = (elapsedTime / duration) * 100;
+    progressBar.style.width = progress + '%';
+
+    if (elapsedTime >= duration) {
+      clearInterval(updateInterval);
+    }
+  }, 1000); // Update every second
+}
+
+function closeModal() {
+  clearInterval(intervalId); // Clear interval
+  document.getElementById('storyModal').style.display = 'none';
+  document.getElementById('storyContent').innerHTML = ''; // Clear the story content
+  document.querySelector('.story-progress').innerHTML = ''; // Clear the progress bar
+}
+
+  </script>
+  <!-- ***** Header Area end ***** -->
+  <div class="main-banner wow fadeIn"  data-wow-duration="1s" data-wow-delay="0.5s">
+    <div class="overlay"></div> <!-- New overlay div -->
+    <div class="container">
+      
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="row">
+            <div class="col-lg-6 align-self-center">
+              <div class="left-content show-up header-text wow fadeInLeft" data-wow-duration="1s" data-wow-delay="1s">
+                <div class="row">
+                  <div class="col-lg-12">
+                    <h6>Intoducing Affiliate Partner</h6>
+                    <h2 class="glow-text" data-text="We're Hiring Traders">We're Hiring Promotors!</h2>
+                    <h6>Earn potentially up to $52K Monthly For Affiliate Partnership </h6>
+                    <p><b>Coming Soon! Starts From 7th of Aug - We will be accepting partnership from clients and traders. To meet our end we will be providing commission contracts and marketing contracts allowing you to earn up to $52K+ or more.</b></h6>
+                  </div>
+                  <div class="col-lg-12">
+                    <div class="border-first-button scroll-to-section">
+                      <a href="Homepage/accounts/cart02rapid.html">Create Account </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <br><br>
+              <div class="right-image wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.5s">
+                <img src="Homepage/assets/images/sonicfxlogo.png" alt="">
+              </div>
+              <!-- TradingView Widget BEGIN -->
+ <div class="tradingview-widget-container">
+  <div class="tradingview-widget-container__widget"></div>
+  <div class="tradingview-widget-copyright"></div>
+  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
+  {
+  "symbols": [
+    {
+      "proName": "FOREXCOM:SPXUSD",
+      "title": "S&P 500 Index"
+    },
+    {
+      "description": "Nasdaq100",
+      "proName": "PEPPERSTONE:NAS100"
+    },
+    {
+      "description": "Gold",
+      "proName": "OANDA:XAUUSD"
+    },
+    {
+      "description": "EURUSD",
+      "proName": "FX:EURUSD"
+    },
+    {
+      "description": "GBPJPY",
+      "proName": "FX:GBPJPY"
+    }
+  ],
+  "showSymbolLogo": true,
+  "isTransparent": true,
+  "displayMode": "adaptive",
+  "colorTheme": "light",
+  "locale": "en"
+}
+  </script>
+</div>
+<!-- TradingView Widget END -->
+                  
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+       
+    <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <p>Copyright © 2024 Icon Trade Capital in partnership with Sonic FX., Ltd. All Rights Reserved. 
+          <br>Protected by: <a href="https://icontradecapital.online" target="_parent" title="Bizz Verify">BizzVerified Solutions</a></p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+ <!-- Custom JavaScript -->
+<script>
+  (function() {
+    // Configure slide interval in milliseconds
+    var slideInterval = 5000; // 5 seconds
+    
+    // Select the pricing slider container
+    var slider = document.getElementById('pricing-slider');
+    
+    // Initialize variables for slide index and automatic slide interval
+    var slideIndex = 0;
+    var slideTimer;
+    
+    // Function to show slides
+    function showSlides() {
+      var slides = slider.getElementsByClassName('item');
+      
+      // Hide all slides
+      for (var i = 0; i < slides.length; i++) {
+        slides[i].style.display = 'none';
+      }
+      
+      // Increment slide index and reset if out of bounds
+      slideIndex++;
+      if (slideIndex >= slides.length) {
+        slideIndex = 0;
+      }
+      
+      // Display current slide
+      slides[slideIndex].style.display = 'flex'; // Use flex to maintain item layout
+      
+      // Set timeout for next slide
+      slideTimer = setTimeout(showSlides, slideInterval);
+    }
+    
+    // Start automatic sliding
+    showSlides();
+  })();
+  </script>
+
+
+  <!-- Scripts -->
+  <script src="Homepage/vendor/jquery/jquery.min.js"></script>
+  <script src="Homepage/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="Homepage/assets/js/owl-carousel.js"></script>
+  <script src="Homepage/assets/js/animation.js"></script>
+  <script src="Homepage/assets/js/imagesloaded.js"></script>
+  <script src="Homepage/assets/js/custom.js"></script>
+          <script src="//code.tidio.co/ahkgvgbh20eu6k161gm1zee57qurmq9u.js" async></script>
+        <!-- Hotjar Tracking Code for https://icontradecapital.online -->
+<script>
+    (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:5040469,hjsv:6};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("#hide").click(function(){
+    $("p").hide();
+  });
+  $("#show").click(function(){
+    $("p").show();
+  });
+});
+</script>
+      
+</body>
+
+</html>
