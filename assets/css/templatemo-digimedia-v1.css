@@ -1024,7 +1024,14 @@ body {
   justify-content: center;
   align-items: center;
 }
-
+/* Styles for the info message */
+#info-message {
+  margin-top: 10px; /* Adjust this value to position the text properly */
+  font-size: 16px;
+  color: #000000; /* Text color */
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.5s; /* Smooth transition for fade in/out */
+}
 /* Loader styles remain the same */
 #loader {
   display: block;
