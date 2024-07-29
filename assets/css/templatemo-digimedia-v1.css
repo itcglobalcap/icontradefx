@@ -3043,7 +3043,7 @@ Pricing
       border-radius: 12px; /* Rounded edges */
       padding: 5px; /* Ensure the border doesn't touch the screen edges */
       background-color: rgba(89, 199, 251, 0.1); /* Light blue background color */
-      margin-left: 11px;
+      margin-left: 2px;
       margin-right: 2px;
   }
 }
