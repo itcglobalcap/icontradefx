@@ -1028,9 +1028,10 @@ body {
 #info-message {
   margin-top: 10px; /* Adjust this value to position the text properly */
   font-size: 16px;
+  text-align: center;
   color: #000000; /* Text color */
   opacity: 0; /* Initially hidden */
-  transition: opacity 0.5s; /* Smooth transition for fade in/out */
+  transition: opacity 0.7s; /* Smooth transition for fade in/out */
 }
 /* Loader styles remain the same */
 #loader {
