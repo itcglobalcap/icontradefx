@@ -126,9 +126,9 @@
 
 
 	
-// JavaScript to manage candlestick animation and hide preloader
 document.addEventListener('DOMContentLoaded', function() {
   var candlesticksContainer = document.getElementById('candlesticks');
+  var infoMessage = document.getElementById('info-message');
   var candlesticks = [
     { type: 'bull', delay: 0 },
     { type: 'bear', delay: 0.5 },
@@ -148,6 +148,11 @@ document.addEventListener('DOMContentLoaded', function() {
     candle.style.animationDelay = candlestick.delay + 's';
     candlesticksContainer.appendChild(candle);
   });
+
+  // Show the info message after 5 seconds
+  setTimeout(function() {
+    infoMessage.style.opacity = 1;
+  }, 5000);
 
   // Hide preloader once all assets are loaded
   window.addEventListener('load', function() {
