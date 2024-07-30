@@ -6,7 +6,7 @@ $("#wizard").steps({
     stepsOrientation: "vertical",
     titleTemplate: '<span class="number">#index#</span>',
     onFinished: function(event, currentIndex) {
-        window.location.href = 'https://icontradecapital.online';
+        window.location.href = 'https://app.icontradecapital.online/signup.php';
     }
 });
 
