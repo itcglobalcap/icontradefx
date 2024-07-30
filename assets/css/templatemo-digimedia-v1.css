@@ -1031,7 +1031,7 @@ body {
   text-align: center;
   color: #000000; /* Text color */
   opacity: 0; /* Initially hidden */
-  transition: opacity 0.7s; /* Smooth transition for fade in/out */
+  transition: opacity 0.5s; /* Smooth transition for fade in/out */
 }
 /* Loader styles remain the same */
 #loader {
