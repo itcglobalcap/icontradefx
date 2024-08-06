@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Getting Started - Icon Trade Capital</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel="stylesheet" href="./style.css">
+        <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+    <link rel="manifest" href="../site.webmanifest">
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!-- 
+
+INSTRUCTIONS:
+- Using html and css, create the design we shared with you on Figma.
+
+WHAT WE EXPECT FROM YOU:
+- Your code should be scalable and maintainable.
+- Your code should be component-based.
+- Your code should support all modern browsers.
+- You are completely free to use the new css features.
+-->
+
+<!-- YOUR HTML STARTS HERE -->
+
+<section class="plans__container">
+  <div class="plans">
+    <div class="plansHero">
+      <h1 class="plansHero__title">Steller Instant Capital</h1>
+      <p class="plansHero__subtitle">No contracts. No Challenges.</p>
+    </div>
+    <div class="planItem__container">
+      <!--free plan starts -->
+      <div class="planItem planItem--free">
+
+        <div class="card">
+          <div class="card__header">
+            <div class="card__icon symbol symbol--rounded"></div>
+            <h2><b>$300,000</b></h2>
+          </div>
+          <div class="card__desc">Get paid as soon as you start trading! No challenges, no BS*.</div>
+        </div>
+
+        <div class="price">$1079<span></span></div>
+
+        <ul class="featureList">
+          <li>95% Profit Split</li>
+          <li>Unlimited Time</li>
+          <li>10 Minimum Days - Certification</li>
+          <li>Free Resets</li>
+          <li class="disabled">Payout-on-demand</li>
+        </ul>
+
+        <button class="button button--pink" id="go300K">Purchase</button>
+      </div>
+      <!--free plan ends -->
+
+      <!--pro plan starts -->
+      <div class="planItem planItem--pro">
+        <div class="card">
+          <div class="card__header">
+            <div class="card__icon symbol"></div>
+            <h2><b>$600,000</b></h2>
+            <div class="card__label label"><b>🏆 Trader's Choice </b></div>
+          </div>
+          <div class="card__desc">Get paid as soon as you start trading! No challenges, no BS*.</div>
+        </div>
+
+        <div class="price">$2159<span></span></div>
+
+        <ul class="featureList">
+          <li>95% Profit Split</li>
+          <li>Unlimited Time</li>
+          <li>10 Minimum Days - Certification</li>
+          <li>Free Resets</li>
+          <li>Payout-on-demand</li>
+        </ul>
+        <button class="button button--pink" id="go600K">Purchase</button>
+      </div>
+      <!--pro plan ends -->
+
+      <!--entp plan starts -->
+      <div class="planItem planItem--entp">
+        <div class="card">
+          <div class="card__header">
+            <div class="card__icon symbol"></div>
+            <h2><b>$900,000</b></h2>
+          </div>
+          <div class="card__desc">Get paid as soon as you start trading! No challenges, no BS*.</div>
+        </div>
+
+        <div class="price">$4299</div>
+
+        <ul class="featureList">
+          <li>95% Profit Split</li>
+          <li>Unlimited Time</li>
+          <li>10 Minimum Days - Certification</li>
+          <li>Free Resets</li>
+          <li>Payout-on-demand</li>
+        </ul>
+        <button class="button button--white" id="go900K">Purchase</button>
+      </div>
+      <!--entp plan ends -->
+
+    </div>
+  </div>
+</section>
+<!-- partial -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var go300K = document.getElementById('go300K');
+    
+    go300K.addEventListener('click', function() {
+      window.location.href = 'https://icontradecapital.online/access-new-account/selected-for-300K-complete.html';
+    });
+  });
+  </script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var go600K = document.getElementById('go600K');
+      
+      go600K.addEventListener('click', function() {
+        window.location.href = 'https://icontradecapital.online/access-new-account/selected-for-600K-complete.html';
+      });
+    });
+    </script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        var go900K = document.getElementById('go900K');
+        
+        go900K.addEventListener('click', function() {
+          window.location.href = 'https://icontradecapital.online/access-new-account/selected-for-900K-complete.html';
+        });
+      });
+      </script>  
+
+</body>
+</html>
