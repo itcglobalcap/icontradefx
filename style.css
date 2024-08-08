@@ -1,0 +1,214 @@
+/* resets */
+body { margin:0px; padding:0px; }
+
+/* main */
+header {
+    height: 360px;
+    z-index: 10;
+}
+.header-banner {
+    background-color: #333;
+    background-image: url('https://37.media.tumblr.com/8b4969985e84b2aa1ac8d3449475f1af/tumblr_n3iftvUesn1snvqtdo1_1280.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 300px;
+}
+
+header h1 {
+    background-color: rgba(18,72,120, 0.8);
+    color: #fff;
+    padding: 0 1rem;
+    position: absolute;
+    top: 2rem; 
+    left: 2rem;
+}
+
+.fixed-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%; 
+}
+
+nav {
+    width: 100%;
+    height: 60px;
+    background: #292f36;
+    postion: fixed;
+    z-index: 10;
+}
+
+nav div {
+    color: white;
+    font-size: 2rem;
+    line-height: 60px;
+    position: absolute;
+    top: 0;
+    left: 2%;
+    visibility: hidden;
+}
+.visible-title {
+    visibility: visible;
+}
+
+nav ul { 
+    list-style-type: none;
+    margin: 0 2% auto 0;
+    padding-left: 0;
+    text-align: right;
+    max-width: 100%;
+}
+nav ul li { 
+    display: inline-block; 
+    line-height: 60px;
+    margin-left: 10px;
+}
+nav ul li a {
+    text-decoration: none; 
+    color: #a9abae;
+}
+
+/* demo content */
+body { 
+    color: #292f36;
+    font-family: helvetica;
+    line-height: 1.6;
+}
+.content{ 
+    margin: 0 auto;
+    padding: 4rem 0;
+    width: 960px;
+    max-width: 100%;
+}
+article {
+    float: left;
+    width: 720px;
+}
+article p:first-of-type {
+    margin-top: 0;
+}
+aside {
+    float: right;
+    width: 120px;
+}
+aside img {
+    width: 100px;
+    height: auto;
+}
+@media only screen and (max-width: 768px) {
+    aside img {
+        display: none; /* Hide images on screens up to 768px wide */
+    }
+}
+p img {
+    max-width: 100%;
+}
+
+@media only screen and (max-width: 960px) {
+    .content{ 
+        padding: 2rem 0;
+    }
+    article {
+        float: none;
+        margin: 0 auto;
+        width: 96%;
+    }
+    article:last-of-type {  
+        margin-bottom: 3rem;
+    }
+    aside {  
+        float: none;
+        text-align: center;
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .content {
+        padding: 0 10px; /* Adjust the amount of padding as needed */
+        box-sizing: border-box; /* Include padding and border in the element's total width */
+        overflow-x: hidden; /* Hide horizontal overflow */
+    }
+}
+@media only screen and (max-width: 768px) {
+    .mobile-br {
+        display: block; /* Display as block on mobile */
+        margin-bottom: 20px; /* Adjust the space as needed */
+    }
+}
+
+@media only screen and (min-width: 769px) {
+    .mobile-br {
+        display: none; /* Hide on desktop */
+    }
+}
+
+.container {
+    max-width: 100%;
+    height: calc(100vh - 60px); /* Full height minus header height */
+    margin: 0;
+    padding: 80px 20px 20px; /* Padding for content and space for fixed header */
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: auto; /* Handle overflow if content is larger than container */
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fafafa;
+}
+
+.item:nth-child(even) {
+    background-color: #f1f1f1;
+}
+
+.content h2 {
+    margin: 0;
+    font-size: 18px;
+    color: #555;
+    white-space: nowrap; /* Prevent text from breaking to a new line */
+    overflow: hidden; /* Hide overflowed text */
+    text-overflow: ellipsis; /* Add ellipsis for overflowed text */
+}
+
+.content p {
+    margin: 5px 0 0;
+    font-size: 14px;
+    color: #777;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 15px;
+    font-size: 14px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #007BFF;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+    white-space: nowrap; /* Prevent text from breaking to a new line */
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
