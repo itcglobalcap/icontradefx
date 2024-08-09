@@ -24,6 +24,18 @@
     <link rel="stylesheet" href="assets/css/animated.css">
     <link rel="stylesheet" href="assets/css/owl.css">
     <style>
+      /* Hide vertical scrollbar on mobile devices but keep scrolling functionality */
+@media (max-width: 768px) { /* Adjust the max-width value based on your needs */
+  body {
+    overflow-y: scroll; /* Ensure vertical scrolling is enabled */
+    -ms-overflow-style: none;  /* For Internet Explorer and Edge */
+    scrollbar-width: none; /* For Firefox */
+  }
+
+  body::-webkit-scrollbar {
+    display: none; /* For Chrome, Safari, and Opera */
+  }
+}
 #preloader {
   position: fixed;
   top: 0;
