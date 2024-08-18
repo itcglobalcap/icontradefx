@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Learn More About Us">
+  <title>About Us - Learn More About Icon Trading Capital</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'>
+<style>
+  /* Style the menu button */
+.menu-button {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: fixed;
+  top: 15px; /* Adjust positioning */
+  right: 15px; /* Adjust positioning */
+  z-index: 1001; /* Ensure it stays on top */
+  width: 25px; /* Width of the button */
+  height: 25px; /* Height of the button */
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Create the lines for the hamburger menu */
+.menu-button div {
+  width: 30px; /* Width of each line */
+  height: 3px; /* Height of each line */
+  background-color: #ffffff; /* Color of the lines */
+  transition: all 0.3s; /* Smooth transition */
+}
+
+/* Show the menu button only on mobile screens */
+@media (max-width: 768px) {
+  .menu-button {
+    display: flex;
+  }
+  .nav {
+    display: none; /* Hide the regular navigation on mobile screens */
+  }
+  .mobile-menu {
+    display: none;
+  }
+}
+
+/* Hide the menu button when the mobile menu is visible */
+.menu-button.hide {
+  display: none;
+}
+
+/* Style the mobile menu */
+.mobile-menu {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: #000000; /* Adjust background color as needed */
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow */
+  padding: 20px;
+  box-sizing: border-box;
+  overflow-y: auto; /* Allow scrolling if menu items overflow */
+  z-index: 1000; /* Ensure it appears on top */
+}
+
+/* Show the mobile menu when active */
+.mobile-menu.show {
+  display: block;
+}
+
+/* Style the close button */
+.close-button {
+  background: none;
+  border: none;
+  font-size: 36px; /* Adjust size as needed */
+  color: #0a55f8e3; /* Adjust color as needed */
+  position: absolute;
+  top: 15px; /* Adjust positioning */
+  right: 15px; /* Adjust positioning */
+  cursor: pointer;
+}
+
+/* Style the mobile menu items */
+.mobile-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.mobile-menu ul li {
+  margin: 0;
+}
+
+.mobile-menu ul li a {
+  display: block;
+  padding: 15px;
+  text-decoration: none;
+  color: #ffffff; /* Adjust text color as needed */
+}
+
+.mobile-menu ul li a:hover {
+  background-color: #0677e7; /* Adjust hover background color as needed */
+  border-radius: 16px;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Exo+2:700');
+* {
+  margin: 0 auto;
+  padding: 0;
+}
+
+body {
+  background: url("https://image.ibb.co/mJ9tLa/image.png");
+  background-color: #212121;
+  background-blend-mode: overlay;
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+}
+
+h1 {
+  color: whitesmoke;
+  font-family: 'Exo 2', sans-serif;
+  font-size: 46px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+p {
+  max-width: 700px;
+  min-height: 200px;
+  padding: 0;
+  color: whitesmoke;
+  font-family: OpenSans;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 22px;
+}
+
+.square {
+  height: 60px;
+  width: 60px;
+  border: 1px dashed white;
+  margin: 0 0 0 55px;
+  /*   padding: 1px; resize squares */
+  background-color: rgba(255, 255, 255, 0.2);
+  display: inline-block;
+  transform: rotateZ(44deg);
+}
+
+.square:hover {
+  background-color: rgba(27, 182, 239, 0.2);
+  transition: ease 0.2s;
+  cursor: pointer;
+}
+
+.square .icons {
+  position: absolute;
+  transform: rotateZ(-44deg);
+  margin: 20px 0 0px 21px;
+}
+
+.fa-facebook,
+.fa-instagram,
+.fa-dribbbler,
+.fa-youtube,
+.fa-dribbble {
+  width: 11px;
+  height: 22px;
+  color: white;
+  font-family: FontAwesome;
+  font-size: 23px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.square:hover .fa-facebook {
+  color: rgba(59, 89, 152, 1)
+}
+
+.square:hover .fa-instagram {
+  color: rgb(239, 27, 27)
+}
+
+.square:hover .fa-dribbble {
+  color: rgba(199, 59, 111, 1)
+}
+
+.square:hover .fa-youtube {
+  color: rgba(229, 45, 39, 1)
+}
+.logo{
+   margin: 1em;
+   position: fixed;
+   bottom: -72px;
+   z-index: 99999999999;
+   right: 0;
+}
+svg{
+
+ 
+
+}
+.pen{
+  fill:black;
+ animation:rotateInDownLeft 3s forwards;
+}
+.all{
+  animation:rotateOut 3s forwards;
+}
+@keyframes rotateInDownLeft {
+  from {
+    transform-origin: left bottom;
+    transform: rotate3d(0,0,0, 0deg);
+    opacity: 1;
+  }
+
+  to {
+    -webkit-transform-origin: left bottom;
+    transform-origin: left bottom;
+ transform: ;
+ transform:translateX(850px) translateY(-83px) rotate3d(0,0,1, -60deg);
+    opacity: 1;
+  }
+}
+@keyframes rotateOut {
+  from {
+    -webkit-transform-origin: center;
+    transform-origin: center;
+    opacity: 1;
+  }
+
+  to {
+    -webkit-transform-origin: center;
+    transform-origin: center;
+    -webkit-transform: rotate3d(0, 0, 1, 90deg);
+    transform: rotate3d(0, 0, 1, 90deg);
+    opacity: 1;
+  }
+}
+/* Mobile styles */
+@media (max-width: 768px) {
+  .center-text {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+</style>
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<header class="header-area header-sticky wow slideInDown" data-wow-duration="0.75s" data-wow-delay="0s">
+ 
+            <button class="menu-button" onclick="toggleMenu()">
+              <div></div>
+              <div></div>
+              <div></div>
+            </button> <!-- Hamburger icon as three lines -->
+         
+</header>
+<div class="mobile-menu" id="mobileMenu">
+  <button class="close-button" onclick="toggleMenu()">×</button> <!-- Close button -->
+  <ul>
+    <li><a href="https://app.icontradecapital.online/login.php">My Dashboard</a></li>
+    <li><a href="https://app.icontradecapital.online/signup.php">Create Account</a></li>
+    <li><a href="blogs.html">Blogs</a></li>
+    <li><a href="index.html">iCoin</a></li>
+    <li><a href="index.html">Accounts</a></li>
+    <li><a href="faq.html">FAQs</a></li>
+    <li><a href="about-us.html" class="active">About Us</a></li>
+  </ul>
+</div>
+
+
+
+<br><br><br><br><br>
+<h1>
+ABOUT US
+<br>
+<img src="https://image.ibb.co/nk616F/Layer_1_copy_21.png" width="47" height="11" align="center">
+</h1>
+<article class="center-text">
+  <p>
+   Icon Trading Capital is a pioneering prop firm dedicated to empowering traders globally. We offer a distinctive and powerful trading platform designed to support and fund traders with the resources they need to excel in the financial markets. Our mission is to fund 10 million traders worldwide through simulated accounts, providing them with the opportunity to trade without risking their own capital.
+  </p>
+  <p>
+    At Icon Trading Capital, we believe in fostering a thriving trading community by offering comprehensive support, advanced trading tools, and a robust trading environment. Our innovative approach includes providing traders with access to a wide range of financial instruments, educational resources, and personalized feedback to help them refine their strategies and achieve their trading goals.
+  </p>
+  <p>
+    We are committed to creating a fair and transparent trading experience, where our traders can focus on honing their skills and making informed decisions. Our team of experts is dedicated to ensuring that every trader receives the guidance and support needed to navigate the complexities of the financial markets successfully.
+  </p>
+  <p>
+    Join us at Icon Trading Capital and be part of a global network of traders who are shaping the future of trading. Discover the unique benefits of trading with us and take the first step toward realizing your trading potential.
+  </p>
+</article>
+<br><br>
+<div class="social_icons">
+  <div class="square">
+    <div class="icons">
+      <i class="fa fa-facebook" aria-hidden="true"></i>
+    </div>
+  </div>
+  <div class="square">
+    <div class="icons">
+      <i class="fa fa-youtube" aria-hidden="true"></i>
+    </div>
+  </div>
+  <div class="square">
+    <div class="icons">
+      <i class="fa fa-instagram" aria-hidden="true"></i>
+    </div>
+  </div>
+ 
+</div>
+<br><br>
+<script>
+  function toggleMenu() {
+  var menu = document.getElementById('mobileMenu');
+  var menuButton = document.querySelector('.menu-button');
+  
+  if (menu.classList.contains('show')) {
+    menu.classList.remove('show');
+    menuButton.classList.remove('hide');
+  } else {
+    menu.classList.add('show');
+    menuButton.classList.add('hide');
+  }
+}
+</script>
+<!-- partial -->
+  
+</body>
+</html>
