@@ -1,4 +1,5 @@
 (function ($) {
+	
 	"use strict";
   $(window).scroll(function() {
     var scroll = $(window).scrollTop();
@@ -11,6 +12,7 @@
       $("header").removeClass("background-header");
     }
   });
+	
 	$('.loop').owlCarousel({
       center: true,
       items:1,
@@ -30,12 +32,14 @@
         }
       }
   });
+	
   if($('.menu-trigger').length){
     $(".menu-trigger").on('click', function() { 
       $(this).toggleClass('active');
       $('.header-area .nav').slideToggle(200);
     });
   }
+	
   $('.scroll-to-section a[href*=\\#]:not([href=\\#])').on('click', function() {
     if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
       var target = $(this.hash);
@@ -53,6 +57,7 @@
       }
     }
   });
+	
   $(document).ready(function () {
       $(document).on("scroll", onScroll);
       $('.scroll-to-section a[href^="#"]').on('click', function (e) {
@@ -73,6 +78,7 @@
           });
       });
   });
+	
   function onScroll(event){
       var scrollPos = $(document).scrollTop();
       $('.nav a').each(function () {
@@ -87,6 +93,7 @@
           }
       });
   }
+	
   $(document).on("click", ".naccs .menu div", function() {
     var numberIndex = $(this).index();
     if (!$(this).is("active")) {
@@ -100,6 +107,7 @@
         $(".naccs ul").height(listItemHeight + "px");
       }
   });
+	
 	document.addEventListener('DOMContentLoaded', function() {
     var candlesticksContainer = document.getElementById('candlesticks');
     var infoMessage = document.getElementById('info-message');
@@ -113,6 +121,7 @@
       { type: 'bull', delay: 3 },
       { type: 'bear', delay: 3.5 }
     ];
+		
     candlesticks.forEach(function(candlestick, index) {
       var candle = document.createElement('div');
       candle.classList.add('candlestick', candlestick.type);
@@ -132,6 +141,7 @@
       }, 500);
     });
   });
+	
 $('.owl-services').owlCarousel({
   items:4,
   loop:true,
@@ -154,6 +164,7 @@ $('.owl-services').owlCarousel({
         }
     }
 })
+	
 $('.owl-portfolio').owlCarousel({
   items:4,
   loop:true,
@@ -176,6 +187,7 @@ $('.owl-portfolio').owlCarousel({
         }
     }
 })
+	
   function mobileNav() {
     var width = $(window).width();
     $('.submenu').on('click', function() {
@@ -228,28 +240,8 @@ document.addEventListener('DOMContentLoaded', function () {
       checkScrollEnd(wrapper, false); // Initial check on load
   });
 });
-document.addEventListener('DOMContentLoaded', function() {
-  var button = document.getElementById('countdown-button');
-  var countdownDisplay = document.getElementById('countdown');
-  var endDate = new Date('2024-09-01T00:00:00Z');
-  function updateCountdown() {
-    var now = new Date();
-    var timeDifference = endDate - now;
-    if (timeDifference > 0) {
-      var days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
-      var hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      var minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
-      var seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
-      countdownDisplay.textContent = `${days}d ${hours}h ${minutes}m ${seconds}s`;
-    } else {
-      countdownDisplay.textContent = 'Countdown ended!';
-      clearInterval(countdownTimer);
-      button.disabled = true; 
-    }
-  }
-  var countdownTimer = setInterval(updateCountdown, 1000);
 
-  
+
 // story modal
 var currentStoryIndex = 0;
 var stories = [
@@ -315,7 +307,18 @@ function closeModal() {
   document.getElementById('storyContent').innerHTML = ''; // Clear the story content
   document.querySelector('.story-progress').innerHTML = ''; // Clear the progress bar
 }
-
+function toggleMenu() {
+  var menu = document.getElementById('mobileMenu');
+  var menuButton = document.querySelector('.menu-button');
+  
+  if (menu.classList.contains('show')) {
+    menu.classList.remove('show');
+    menuButton.classList.remove('hide');
+  } else {
+    menu.classList.add('show');
+    menuButton.classList.add('hide');
+  }
+}
 // read less script
  // read less footer script
  document.addEventListener("DOMContentLoaded", function() {
@@ -400,24 +403,7 @@ $(document).ready(function(){
   });
 });
 
-// Shimmerwave Text
-const target = document.getElementById('shimmerWave');
-function splitTextToSpans(targetElement) {
-    if (targetElement) {
-        const text = targetElement.textContent;
-        targetElement.innerHTML = '';
-        for (let character of text) {
-            const span = document.createElement('span');
-            if (character === ' ') {
-                span.innerHTML = '&nbsp;';
-            } else {
-                span.textContent = character;
-            }
-            targetElement.appendChild(span);
-        }
-    }
-}
-splitTextToSpans(target);
+
 
 // Get the modal
 var modal = document.getElementById("iconModal");
@@ -443,17 +429,4 @@ window.onclick = function(event) {
     if (event.target == modal) {
         modal.style.display = "none";
     }
-}
-
-function toggleMenu() {
-  var menu = document.getElementById('mobileMenu');
-  var menuButton = document.querySelector('.menu-button');
-  
-  if (menu.classList.contains('show')) {
-    menu.classList.remove('show');
-    menuButton.classList.remove('hide');
-  } else {
-    menu.classList.add('show');
-    menuButton.classList.add('hide');
-  }
 }
