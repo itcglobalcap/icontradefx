@@ -1,8 +1,5 @@
 (function ($) {
-	
 	"use strict";
-
-	// Header Type = Fixed
   $(window).scroll(function() {
     var scroll = $(window).scrollTop();
     var box = $('.header-text').height();
@@ -14,8 +11,6 @@
       $("header").removeClass("background-header");
     }
   });
-
-
 	$('.loop').owlCarousel({
       center: true,
       items:1,
@@ -35,18 +30,12 @@
         }
       }
   });
-	
-
-	// Menu Dropdown Toggle
   if($('.menu-trigger').length){
     $(".menu-trigger").on('click', function() { 
       $(this).toggleClass('active');
       $('.header-area .nav').slideToggle(200);
     });
   }
-
-
-  // Menu elevator animation
   $('.scroll-to-section a[href*=\\#]:not([href=\\#])').on('click', function() {
     if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
       var target = $(this.hash);
@@ -64,20 +53,15 @@
       }
     }
   });
-
   $(document).ready(function () {
       $(document).on("scroll", onScroll);
-      
-      //smoothscroll
       $('.scroll-to-section a[href^="#"]').on('click', function (e) {
           e.preventDefault();
           $(document).off("scroll");
-          
           $('.scroll-to-section a').each(function () {
               $(this).removeClass('active');
           })
           $(this).addClass('active');
-        
           var target = this.hash,
           menu = target;
           var target = $(this.hash);
@@ -89,7 +73,6 @@
           });
       });
   });
-
   function onScroll(event){
       var scrollPos = $(document).scrollTop();
       $('.nav a').each(function () {
@@ -104,27 +87,19 @@
           }
       });
   }
-
-
-  // Acc
   $(document).on("click", ".naccs .menu div", function() {
     var numberIndex = $(this).index();
-
     if (!$(this).is("active")) {
         $(".naccs .menu div").removeClass("active");
         $(".naccs ul li").removeClass("active");
-
         $(this).addClass("active");
         $(".naccs ul").find("li:eq(" + numberIndex + ")").addClass("active");
-
         var listItemHeight = $(".naccs ul")
           .find("li:eq(" + numberIndex + ")")
           .innerHeight();
         $(".naccs ul").height(listItemHeight + "px");
       }
   });
-
-
 	document.addEventListener('DOMContentLoaded', function() {
     var candlesticksContainer = document.getElementById('candlesticks');
     var infoMessage = document.getElementById('info-message');
@@ -137,40 +112,26 @@
       { type: 'bear', delay: 2.5 },
       { type: 'bull', delay: 3 },
       { type: 'bear', delay: 3.5 }
-      // Add more candlesticks as needed
     ];
-  
-    // Create candlesticks dynamically
     candlesticks.forEach(function(candlestick, index) {
       var candle = document.createElement('div');
       candle.classList.add('candlestick', candlestick.type);
       candle.style.animationDelay = candlestick.delay + 's';
       candlesticksContainer.appendChild(candle);
     });
-  
-    // Show the info message after 2 seconds
     setTimeout(function() {
       infoMessage.style.opacity = 1;
     }, 2000);
-  
-    // Hide preloader once all assets are loaded
     window.addEventListener('load', function() {
       var preloader = document.getElementById('preloader');
       var content = document.getElementById('content');
-  
-      // Add a class to fade out the preloader
       preloader.classList.add('fade-out');
-  
-      // Hide preloader and show content after the fade-out transition
       setTimeout(function() {
         preloader.style.display = 'none';
         content.style.display = 'block';
-      }, 500); // Match this duration with the CSS transition duration
+      }, 500);
     });
   });
-  
-
-
 $('.owl-services').owlCarousel({
   items:4,
   loop:true,
@@ -193,7 +154,6 @@ $('.owl-services').owlCarousel({
         }
     }
 })
-
 $('.owl-portfolio').owlCarousel({
   items:4,
   loop:true,
@@ -216,12 +176,6 @@ $('.owl-portfolio').owlCarousel({
         }
     }
 })
-
-
-
-	
-
-	// Window Resize Mobile Menu Fix
   function mobileNav() {
     var width = $(window).width();
     $('.submenu').on('click', function() {
@@ -231,42 +185,30 @@ $('.owl-portfolio').owlCarousel({
       }
     });
   }
-
-
-
-
 })(window.jQuery);
-
 document.addEventListener('DOMContentLoaded', function () {
   const tabButtons = document.querySelectorAll('.tab-button');
   const tabContents = document.querySelectorAll('.table-wrapper');
-
   function showTab(tabId) {
       tabButtons.forEach(button => {
           button.classList.toggle('active', button.dataset.tab === tabId);
       });
-
       tabContents.forEach(content => {
           content.classList.toggle('active', content.id === tabId);
       });
   }
-
   tabButtons.forEach(button => {
       button.addEventListener('click', () => showTab(button.dataset.tab));
   });
-
   function syncScroll(e) {
       const isTopScroller = e.target.classList.contains('scroller-top');
       const target = isTopScroller 
                      ? document.querySelector(`#${e.target.nextElementSibling.id}`)
-                     : document.querySelector(`#${e.target.previousElementSibling.id}`);
-      
+                     : document.querySelector(`#${e.target.previousElementSibling.id}`); 
       target.scrollLeft = e.target.scrollLeft;
-
       checkScrollEnd(e.target, isTopScroller);
       checkScrollEnd(target, !isTopScroller);
   }
-
   function checkScrollEnd(element, isTopScroller) {
       const parent = isTopScroller ? element.parentElement : element.closest('.table-inner-wrapper');
       const scrolledToEnd = element.scrollLeft + element.clientWidth >= element.scrollWidth;
@@ -277,66 +219,37 @@ document.addEventListener('DOMContentLoaded', function () {
           parent.classList.remove('scrolled-to-end');
       }
   }
-
   document.querySelectorAll('.scroller-top').forEach(scroller => {
       scroller.addEventListener('scroll', syncScroll);
       checkScrollEnd(scroller, true); // Initial check on load
   });
-
   document.querySelectorAll('.table-inner-wrapper').forEach(wrapper => {
       wrapper.addEventListener('scroll', syncScroll);
       checkScrollEnd(wrapper, false); // Initial check on load
   });
 });
-
-// countdown
 document.addEventListener('DOMContentLoaded', function() {
-  // Target the button and countdown display
   var button = document.getElementById('countdown-button');
   var countdownDisplay = document.getElementById('countdown');
-
-  // Set the end date for the countdown (August 7th)
   var endDate = new Date('2024-09-01T00:00:00Z');
-
-  // Function to update the countdown
   function updateCountdown() {
     var now = new Date();
     var timeDifference = endDate - now;
-
     if (timeDifference > 0) {
       var days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
       var hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
       var minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
       var seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
-
       countdownDisplay.textContent = `${days}d ${hours}h ${minutes}m ${seconds}s`;
     } else {
       countdownDisplay.textContent = 'Countdown ended!';
       clearInterval(countdownTimer);
-      button.disabled = true; // Disable button after countdown ends
+      button.disabled = true; 
     }
   }
-
-  // Call updateCountdown every second
   var countdownTimer = setInterval(updateCountdown, 1000);
 
-  // Function to redirect to /welcome.html
-  function redirectToWelcome() {
-    window.location.href = 'https://icontradecapital.online/access-new-account/selected-for-200K-promotion.html';
-  }
-
-  // Add event listener to the button
-  button.addEventListener('click', redirectToWelcome);
-});
-
-// home script
-document.addEventListener('DOMContentLoaded', function() {
-  setTimeout(function() {
-    var glowText = document.querySelector('.glow-text');
-    glowText.classList.add('start-shimmer');
-  }, 100000); // 100 seconds delay
-});
-
+  
 // story modal
 var currentStoryIndex = 0;
 var stories = [
@@ -474,8 +387,8 @@ function closeModal() {
   document.body.appendChild(tidioScript);
 }
 
-// Set a timeout to load the Tidio script after 2 minutes (120000 milliseconds)
-setTimeout(loadTidioChat, 120000);
+// Set a timeout to load the Tidio script after 1 minutes (60000 milliseconds)
+setTimeout(loadTidioChat, 60000);
 
 // script home
 $(document).ready(function(){
