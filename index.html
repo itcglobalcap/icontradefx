@@ -213,6 +213,44 @@
     opacity: 0;
   }
 }
+      
+.containerh {
+            display: flex;
+            align-items: center;
+        }
+        .border-first-button {
+            padding: 10px;
+            text-align: center;
+            margin-right: 10px;
+        }
+        .discord-icon {
+            font-size: 24px;
+            color: #7289da;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+       /* Center the button-wrapper in its container */
+.button-wrapper {
+    display: flex;
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+    gap: 10px; /* Optional: adds space between the buttons and separator */
+}
+
+/* Styles for the buttons */
+.discord-icon {
+    text-decoration: none;
+    color: inherit;
+    /* Add other styles as needed */
+}
+
+/* Styles for the separator */
+.separator {
+    width: 2px; /* Adjust the width of the line */
+    height: 24px; /* Adjust the height to match your buttons */
+    background-color: pink; /* Pink color for the line */
+}
     </style>
   </head>
 <body>
@@ -323,9 +361,14 @@
                     <p><b>We're offering traders the ability to trade our sim funded accounts of their choice without paying before they make actual profits. Keep 99% of your profits and access unlimited free resets.</b></h6>
                   </div>
                   <div class="col-lg-12">
-                    <div class="border-first-button scroll-to-section">
-                      <a href="https://app.icontradecapital.online/signup.php">Create Account </a>
-                    </div>
+                    <div class="containerh">
+                      <div class="border-first-button scroll-to-section">
+                          <a href="https://app.icontradecapital.online/signup.php">Create Account</a>
+                      </div>
+                      <a href="https://www.discord.com/invite/6hDindwnd" class="discord-icon" style="color:white;">
+                          <i class="fab fa-discord"></i>
+                      </a>
+                  </div>
                   </div>
                 </div>
               </div>
@@ -405,6 +448,20 @@
   </script>
 </div>
               <a class="btn" href="https://app.icontradecapital.online/signup.php">Create Account</a> <a href="https://app.icontradecapital.online/login.php"> Dashboard</a>
+              <br><br><br>
+              <div class="section-heading">
+                <h6 style="font-size: 16px;">Join Our Community</h6>
+                <p style="font-size: 16px;"> Discord vs Oplux </p>
+              </div>
+              <div class="button-wrapper">
+                <a href="https://discord.gg/3ETY4ujjyZ" class="discord-icon">
+                    <i class="fab fa-discord"></i>
+                </a>
+                <div class="separator"></div>
+                <a href="https://oplux.icontradecapital.online" class="discord-icon">
+                    <i class="fab fa-superpowers"></i>
+                </a>
+            </div>
             </div>
           </div>
         </div>
